@@ -286,9 +286,10 @@ All RC Switch ``protocol`` settings have these settings:
 
   - **pulse_length** (**Required**, int): The pulse length of the protocol - how many microseconds
     one pulse should last for.
-  - **sync** (*Optional*): The number of high/low pulses for the sync header, defaults to ``[1, 31]``
+  - **sync** (*Optional*): The number of high/low pulses for the sync bit. This will be sent before the signal. Defaults to ``[1, 31]``
   - **zero** (*Optional*): The number of high/low pulses for a zero bit, defaults to ``[1, 3]``
   - **one** (*Optional*): The number of high/low pulses for a one bit, defaults to ``[3, 1]``
+  - **pause** (*Optional*): The number of high/low pulses for the pause/end bit. This will be sent after the signal. Defaults to ``[0, 0]`` 
   - **inverted** (*Optional*, boolean): If this protocol is inverted. Defaults to ``false``.
 
 ``remote_transmitter.transmit_rc_switch_type_a`` Action
